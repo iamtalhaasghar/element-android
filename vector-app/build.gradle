@@ -68,7 +68,7 @@ def getVersionCode() {
 def getNightlyUniversalApkPath() {
     def taskNames = gradle.getStartParameter().taskNames.toString()
     if(taskNames.contains("Nightly")) {
-        return "vector-app/build/outputs/apk/gplay/nightly/vector-gplay-universal-nightly.apk"
+        return "vector-app/build/outputs/apk/gplay/nightly/the-revivalists-gplay-universal-nightly.apk"
     } else {
         return ""
     }
@@ -203,7 +203,7 @@ android {
                 // See https://issuetracker.google.com/issues/171133218
                 output.versionCodeOverride = baseVariantVersion + baseAbiVersionCode
                 print "ABI " + output.getFilter(OutputFile.ABI) + " \t-> VersionCode = " + output.versionCode + "\n"
-                output.outputFileName = output.outputFileName.replace("vector-app", "vector")
+                output.outputFileName = output.outputFileName.replace("vector-app", "the-revivalists")
             }
         }
 
